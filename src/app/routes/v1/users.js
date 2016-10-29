@@ -1,8 +1,12 @@
 var express = require('express')
+var controller = require('../../users')
 
 var router = express.Router()
 
-router.get('/', (req, res, next) => res.status(200).send({data:{users:[]}}))
-router.post('/', (req, res, next) => res.status(200).send(req.body))
+router.get('/', controller.list)
+router.get('/:id', controller.get)
+router.post('/', controller.create)
+router.put('/', controller.update)
+router.delete('/', controller.remove)
 
 module.exports = router
