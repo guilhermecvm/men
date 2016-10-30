@@ -1,4 +1,4 @@
-var cluster = require('cluster')
+import cluster from 'cluster'
 
 if (cluster.isMaster) {
   // count machine cpu's

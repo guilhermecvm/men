@@ -1,4 +1,4 @@
-var app = require('./app/app')
+import app from './app/app'
 
 var port = process.env.PORT || 3000
 

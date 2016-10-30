@@ -5,14 +5,17 @@
   "author": "Guilherme Miranda",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "cluster": "nodemon src/cluster.js"
+    "start": "nodemon --exec npm run babel-node -- src/index.js",
+    "cluster": "nodemon --exec npm run babel-node -- src/cluster.js",
+    "babel-node": "babel-node --presets=es2015"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
     "eslint": "^3.9.0",
     "nodemon": "^1.11.0"
   }

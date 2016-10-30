@@ -1,7 +1,7 @@
-var express = require('express')
-var bodyParser = require('body-parser')
+import express from 'express'
+import bodyParser from 'body-parser'
 
-var v1 = require('./routes/v1')
+import v1 from './routes/v1'
 
 var app = express()
 
@@ -44,4 +44,4 @@ app.use((err, req, res, next) => {
   })
 })
 
-module.exports = app
+export default app
