@@ -1,9 +1,18 @@
 import express from 'express'
 import bodyParser from 'body-parser'
+import mongoose from 'mongoose'
 
 import v1 from './routes/v1'
 
 var app = express()
+
+mongoose.Promise = global.Promise
+mongoose.connect('mongodb://localhost/men-seed')
+var db = mongoose.connection
+db.on('error', console.error.bind(console, 'connection error:'))
+db.once('open', function() {
+  // we're connected!
+})
 
 app.use(bodyParser.json())
 
