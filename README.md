@@ -11,7 +11,7 @@ To get you started you can simply clone the men-seed repository and install the 
 ### Clone men-seed
 
 ```bash
-git clone --depth=1 git@github.com:guilhermecvm/men-seed.git <your-project-name>
+git clone --depth=1 https://github.com/guilhermecvm/men-seed.git <your-project-name>
 ```
 
 The `depth=1` tells git to only pull down one commit worth of historical data.
